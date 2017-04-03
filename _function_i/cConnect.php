@@ -3,7 +3,7 @@ class cConnect {
 	private $dbHost  = "localhost";
 	private $dbUser  = "root";
 	private $dbPass  = "";
-	private $dbName  = "db_peterpan";
+	private $dbName  = "db_beasiswa";
 
 	private $dbHost2  = "localhost";
 	private $dbUser2  = "root";
@@ -46,6 +46,3 @@ class cConnect {
 	}
 }
 ?>
-
-
-
