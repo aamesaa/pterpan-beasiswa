@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <?php
 	// include function & css
-	//coba
+
 	include_once("_function_i/cConnect.php");
 	include_once("_function_i/cview.php");
 	include_once("_function_i/inc_f_object.php");
@@ -58,7 +58,7 @@
 			//settype($logout,"boolean");
 			//$connftp  = @ftp_connect("222.124.22.23");
 			//$okein = @ftp_login($connftp,$_POST["uname"],$_POST["pword"]);
-
+f
 			// nilai awal jika di by pass
 			$login=1;
 			$okein=1;
