@@ -176,11 +176,11 @@ $_SESSION["unit_base"]="12345";
 			break;
 			case 1:
 				echo '<blockquote> <p>Info Beasiswa</p> </blockquote>';
-				include("IncMahasiswa.php");
+				include("incDaftarBeasiswa.php");
 			break;
 			case 2:
 				echo '<blockquote> <p>Hasil Seleksi</p> </blockquote>';
-				include("IncMatakuliah.php");
+				include("incHasilSeleksi.php");
 			break;
 			case 3:
 				echo '<blockquote> <p>KHS</p> </blockquote>';
