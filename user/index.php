@@ -1,4 +1,4 @@
-<?php session_start(); 
+<?php session_start();
 $_SESSION["nama_karyawan"]="TESTING";
 $_SESSION["nik"]="12345";
 $_SESSION["nama_unit"]="BIRO 3";
@@ -79,7 +79,7 @@ $_SESSION["unit_base"]="12345";
 	//$conn2 = new cConnect();
 	//$conn2->goConnect2();
 
-	?>  
+	?>
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
@@ -91,7 +91,7 @@ $_SESSION["unit_base"]="12345";
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">KHS-ONLINE</a>
+      <a class="navbar-brand" href="#">SIMBA</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -99,9 +99,9 @@ $_SESSION["unit_base"]="12345";
       <ul class="nav navbar-nav">
         <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
         <li><a href="?l=0">HOME</a></li>
-		<li><a href="?l=1">MAHASISWA</a></li>
-		<li><a href="?l=2">MATAKULIAH</a></li>
-		<li><a href="?l=3">MENU 3</a></li>
+		<li><a href="?l=1">Info Beasiswa</a></li>
+		<li><a href="?l=2">Hasil Seleksi</a></li>
+		<!--<li><a href="?l=3">MENU 3</a></li>
 		<li><a href="?l=4">MENU 4</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MENU 5<span class="caret"></span></a>
@@ -115,22 +115,23 @@ $_SESSION["unit_base"]="12345";
           </ul>
         </li>
       </ul>
-      <!-- 
+      <!--
 	  <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
-		-->  
+		-->
 	<ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION["nama_karyawan"]?><span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#"><?php echo $_SESSION["nik"];?></a></li>
+            <li><a href="#">Logout</a></li>
+          <!--  <li><a href="#"><?php echo $_SESSION["nik"];?></a></li>
             <li><a href="#"><?php echo $_SESSION["nama_unit"]."/".$_SESSION["unit_base"];?></a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">LOGOUT</a></li>
+            <li><a href="#">LOGOUT</a></li>-->
           </ul>
         </li>
       </ul>
@@ -141,29 +142,29 @@ $_SESSION["unit_base"]="12345";
 <br><br><br>
 
 <?php
-		if (empty($_GET["l"])) { 
-			$pilihlink = 0;			
+		if (empty($_GET["l"])) {
+			$pilihlink = 0;
 		} else {
-			$pilihlink = $_GET["l"];			
+			$pilihlink = $_GET["l"];
 		}
 		switch ($pilihlink) {
 			case 0:
 				echo "HOME";
 				include("incText.php");
-			break;		
+			break;
 			case 1:
 				echo '<blockquote> <p>MAHASISWA</p> </blockquote>';
 				include("IncMahasiswa.php");
-			break;	
+			break;
 			case 2:
 				echo '<blockquote> <p>PRESENSI</p> </blockquote>';
 				include("IncMatakuliah.php");
-			break;	
+			break;
 			case 3:
 				echo '<blockquote> <p>KHS</p> </blockquote>';
 				include("");
 			break;
-		}		
+		}
 ?>
 
  </body>
