@@ -8,22 +8,44 @@ $_SESSION["unit_base"]="12345";
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
  <head>
-  <title>KHS</title>
-  <meta name="Generator" content="EditPlus">
-  <meta name="Author" content="">
-  <meta name="Keywords" content="">
-  <meta name="Description" content="">
+  <title>SIMBA</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom Google Web Font -->
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+
+  <!-- Custom CSS-->
+  <link href="css/general.css" rel="stylesheet">
+
+ <!-- Owl-Carousel -->
+  <link href="css/custom.css" rel="stylesheet">
+<link href="css/owl.carousel.css" rel="stylesheet">
+  <link href="css/owl.theme.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/animate.css" rel="stylesheet">
+
+<!-- Magnific Popup core CSS file -->
+<link rel="stylesheet" href="css/magnific-popup.css">
+
+<script src="js/modernizr-2.8.3.min.js"></script>  <!-- Modernizr /-->
+
+  <!-- Magnific Popup core CSS file-->
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <script src="js/modernizr-2.8.3.min.js"></script> <!-- Modernizr /-->
 
   <link rel="stylesheet" href="../_jquery-ui-1.11.1/jquery-ui.css">
-  <link rel="stylesheet" href="../_bootstrap-3.3.4/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../_css/style.css" type="text/css" media="all" />
+  <!--<link rel="stylesheet" href="../_bootstrap-3.3.4/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../_css/style.css" type="text/css" media="all" />-->
   <script src="../_bootstrap-3.3.4/js/tests/vendor/jquery.min.js"></script>
   <script src="../_bootstrap-3.3.4/dist/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="../_tinymce/js/tinymce/tinymce.min.js"></script>
   <script type="text/javascript">
+
   tinymce.init({
-      selector: "textarea",
-      height: 110,
+    selector: "textarea",
+    height: 110,
       plugins: [
           "advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker",
           "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
@@ -81,26 +103,37 @@ $_SESSION["unit_base"]="12345";
 
 	?>
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
+<nav class="navbar-default stuckMenu" role="navigation" style="position:fixed;top:0px">
+  <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">SIMBA</a>
+      <a class="navbar-brand" href="?l=0">SIMBA</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
-        <li><a href="?l=0">HOME</a></li>
-		<li><a href="?l=1">Info Beasiswa</a></li>
-		<li><a href="?l=2">Hasil Seleksi</a></li>
+		    <li class="menuItem"><a href="?l=1">Info Beasiswa</a></li>
+		    <li class="menuItem"><a href="?l=2">Hasil Seleksi</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION["nama_karyawan"]?><span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Logout</a></li>
+              </ul>
+        </li>
+      </ul>
+      <!--  <li><a href="#"><?php echo $_SESSION["nik"];?></a></li>
+        <li><a href="#"><?php echo $_SESSION["nama_unit"]."/".$_SESSION["unit_base"];?></a></li>
+        <li role="separator" class="divider"></li>
+        <li><a href="#">LOGOUT</a></li>-->
+
 		<!--<li><a href="?l=3">MENU 3</a></li>
 		<li><a href="?l=4">MENU 4</a></li>
         <li class="dropdown">
@@ -123,18 +156,7 @@ $_SESSION["unit_base"]="12345";
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
 		-->
-	<ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION["nama_karyawan"]?><span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Logout</a></li>
-          <!--  <li><a href="#"><?php echo $_SESSION["nik"];?></a></li>
-            <li><a href="#"><?php echo $_SESSION["nama_unit"]."/".$_SESSION["unit_base"];?></a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">LOGOUT</a></li>-->
-          </ul>
-        </li>
-      </ul>
+
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
@@ -153,11 +175,11 @@ $_SESSION["unit_base"]="12345";
 				include("incText.php");
 			break;
 			case 1:
-				echo '<blockquote> <p>MAHASISWA</p> </blockquote>';
+				echo '<blockquote> <p>Info Beasiswa</p> </blockquote>';
 				include("IncMahasiswa.php");
 			break;
 			case 2:
-				echo '<blockquote> <p>PRESENSI</p> </blockquote>';
+				echo '<blockquote> <p>Hasil Seleksi</p> </blockquote>';
 				include("IncMatakuliah.php");
 			break;
 			case 3:
