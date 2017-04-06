@@ -175,7 +175,6 @@ $_SESSION["unit_base"]="12345";
 				include("incText.php");
 			break;
 			case 1:
-				echo '<blockquote> <p>Info Beasiswa</p> </blockquote>';
 				include("incDaftarBeasiswa.php");
 			break;
 			case 2:
