@@ -13,7 +13,7 @@
 	<script src="../_bootstrap-3.3.4/js/tests/vendor/jquery.min.js"></script>
 	<script src="../_bootstrap-3.3.4/dist/js/bootstrap.min.js"></script>
 	<script src="../_jquery-ui-1.11.1/jquery-1.11.1.js"></script>
-	<script src="../_jquery-ui-1.11.1/jquery-ui.js"></script>	
+	<script src="../_jquery-ui-1.11.1/jquery-ui.js"></script>
 
 	<script type="text/javascript" src="../_tinymce/js/tinymce/tinymce.min.js"></script>
 	<script type="text/javascript">
@@ -145,7 +145,7 @@
 	</nav>
 	<div class="container">
 		<?php
-		if (empty($_GET["l"])) { 
+		if (empty($_GET["l"])) {
 			$pilihlink = 0;
 		} else {
 			$pilihlink = $_GET["l"];
@@ -154,7 +154,7 @@
 			case 0:
 				echo "home";
 				//include("incText.php");
-			break;		
+			break;
 			case 1:
 				?>
 				<blockquote>
@@ -162,7 +162,7 @@
 				</blockquote>
 				<?php
 				//include("incKaryawan.php");
-			break;		
+			break;
 			case 2:
 				?>
 				<blockquote>
@@ -170,7 +170,7 @@
 				</blockquote>
 				<?php
 				//include("incSiswa.php");
-			break;		
+			break;
 			case 3:
 				?>
 				<blockquote>
@@ -178,7 +178,7 @@
 				</blockquote>
 				<?php
 				//include("incKelas.php");
-			break;	
+			break;
 			case 4:
 				?>
 				<blockquote>
@@ -186,7 +186,7 @@
 				</blockquote>
 				<?php
 				//include("incPoin.php");
-			break;	
+			break;
 			case 5:
 				?>
 				<blockquote>
@@ -229,7 +229,7 @@
 			case 13:
 				//include("incKlasifikasi.php");
 			break;
-		}			
+		}
 		?>
 	</div>
 	<br><br>

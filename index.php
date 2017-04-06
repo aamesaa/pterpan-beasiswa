@@ -1,7 +1,6 @@
 <?php session_start(); ?>
 <?php
 	// include function & css
-	//coba
 	include_once("_function_i/cConnect.php");
 	include_once("_function_i/cview.php");
 	include_once("_function_i/inc_f_object.php");
@@ -66,7 +65,7 @@
 			// cek uname & pword
 
 			if ($okein==1)  {
-				$sqlunpw = "select a.* from user_system a where a.email='".$cekemail."' and a.password='".$_POST["pword"]."'";
+				$sqlunpw = "select a.* from system_usr a where a.user_id='".$cekemail."' and a.password='".$_POST["pword"]."'";
 				echo $sqlunpw;
 
 				$view = new cView();
